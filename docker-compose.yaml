@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: podcasts-gateway-service
+    ports:
+      - '3003:3003'
+    volumes:
+      - .:/app
+      - /app/node_modules
